@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebigide Jude - WDD 230 - Web Frontend Development</title>
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development: Course assignment portal by Ebigide Jude. This website is dedicated   to developing responsive web design skills through hands-on projects and tutorials.">
+    <meta name="author" content="Ebigide Jude">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Ebigide Jude's Profile" width="100" height="95">
+            <span class="name">Ebigide Jude</span>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>WDD 230: Web Frontend Development</h1>
+        <div class="parent">
+            <section class="card">
+                <h2>Learning Activities</h2>
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </section>
+            <section class="card">
+                <h2>Information</h2>
+                <p>Weather: <span id="weatherPlaceholder">Data not available</span></p>
+                <p>Page Visits: <span id="visitsPlaceholder">0</span></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+</body>
+
+</html>
