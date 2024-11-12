@@ -7,54 +7,57 @@
 
 body {
     font-family: 'Roboto', Helvetica, sans-serif;
-    color: #333333; /* Text on light background */
-    background-color: #EAEAEA; /* Light neutral background */
+    color: #333333;
+    background-color: #EAEAEA;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .profile {
     display: flex;
+    flex-direction: column; /* Stack profile elements on small screens */
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    background-color: #59253A; /* Primary color */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: #59253A;
+    padding: 20px;
 }
 
 .profile .name {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFFFFF; /* Text color on dark background */
+    color: #FFFFFF;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Rock Salt', serif;
-    font-size: 1.5rem;
-    color: #59253A; /* Primary color used for header */
+    color: #59253A;
     text-align: center;
     margin-bottom: 1rem;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 h2 {
-    font-family: 'Rock Salt', serif;
     font-size: 1.25rem;
-    color: #59253A; /* Primary color */
-    margin-bottom: 0.5rem;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    width: 100%;  /* Full width */
     padding: 0;
-    background-color: #F7CAC9; /* Secondary color */
+    background-color: #F7CAC9;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Stack navigation items vertically on mobile */
+    justify-content: space-evenly; /* Space items evenly */
     width: 100%;
     padding: 0;
 }
@@ -64,7 +67,7 @@ nav li {
 }
 
 nav a {
-    color: #333333; /* Nav link color on light background */
+    color: #333333;
     text-decoration: none;
     font-weight: bold;
     padding: 1rem;
@@ -85,7 +88,7 @@ nav a:hover {
 
 main {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
     padding: 1rem;
     background-color: #EAEAEA; /* Neutral background */
     text-align: center;
@@ -93,13 +96,13 @@ main {
 
 .parent {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column for mobile */
     gap: 1rem;
     margin: 1rem 2vw;
 }
 
 .parent section {
-    border: 1px solid #59253A; 
+    border: 1px solid #59253A;
     background-color: #F7CAC9; 
     border-radius: 10px;
     overflow: hidden;
@@ -123,7 +126,7 @@ footer {
     width: 100%;
     padding: 1rem;
     background-color: #59253A;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     text-align: center;
     font-size: 0.9rem;
 }

@@ -1,23 +1,8 @@
+/* Media Query for larger screens (tablets and above) */
 @media (min-width: 768px) {
     
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    nav {
-        flex-direction: row;
-        justify-content: center;
-    }
-
     nav ul {
-        display: flex;
-        gap: 1rem;
-    }
-
-    nav li {
-        margin: 0;
+        flex-direction: row;
     }
 
     .parent {
@@ -32,5 +17,9 @@
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .profile .name {
+        font-size: 2.8rem;
     }
 }
