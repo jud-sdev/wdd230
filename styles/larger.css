@@ -1,8 +1,13 @@
 /* Media Query for larger screens (tablets and above) */
 @media (min-width: 768px) {
-    
     nav ul {
-        flex-direction: row;
+        flex-direction: row; /* Display navigation items in a row on larger screens */
+        justify-content: space-between; /* Spread out navigation items across full width */
+        width: 100%;  /* Ensure the navigation takes up the full width of the screen */
+    }
+
+    #menu {
+        display: none;  /* Hide hamburger on larger screens */
     }
 
     .parent {
@@ -21,5 +26,20 @@
 
     .profile .name {
         font-size: 2.8rem;
+    }
+
+    .navigation {
+        display: flex;  /* Show the navigation links as a flex container */
+        width: 100%; /* Ensure the navigation takes up the full width */
+        justify-content: space-between; /* Space out the items in the navigation */
+    }
+
+    .navigation li {
+        display: inline-block;  /* Display the items horizontally */
+    }
+
+    .navigation a {
+        padding: 1rem;
+        font-size: 1rem; /* Adjust font size for larger screens */
     }
 }
