@@ -15,7 +15,7 @@ body {
 
 .profile {
     display: flex;
-    flex-direction: column; /* Stack profile elements on small screens */
+    flex-direction: column; 
     align-items: center;
     gap: 1rem;
     justify-content: center;
@@ -47,17 +47,17 @@ h2 {
 nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;  /* Full width */
+    width: 100%; 
     padding: 0;
     background-color: #F7CAC9;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap; 
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Stack navigation items vertically on mobile */
-    justify-content: space-evenly; /* Space items evenly */
+    flex-direction: column; 
+    justify-content: space-evenly; 
     width: 100%;
     padding: 0;
     margin: 0;
@@ -91,13 +91,13 @@ main {
     width: 100%;
     max-width: 100%;
     padding: 1rem;
-    background-color: #EAEAEA; /* Neutral background */
+    background-color: #EAEAEA; 
     text-align: center;
 }
 
 .parent {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for mobile */
+    grid-template-columns: 1fr; 
     gap: 1rem;
     margin: 1rem 2vw;
 }
@@ -144,22 +144,22 @@ footer {
 }
 
 #menu::before {
-    content: "≡";  /* Hamburger icon */
+    content: "≡";  
 }
 
 #menu.show::before {
-    content: "X";  /* Change to X when the menu is open */
+    content: "X"; 
 }
 
 .navigation {
     list-style: none;
     margin: 0 auto;
     max-width: 760px;
-    display: none;  /* Hide the menu by default */
+    display: none;  
 }
 
 .navigation li {
-    display: block; /* Change state for small view */
+    display: block; 
     flex: 1 1 100%;
 }
 
@@ -180,5 +180,5 @@ footer {
 } */
 
 .navigation.show {
-    display: block; /* Show the menu when it has the 'show' class */
+    display: block;
 }
