@@ -4,13 +4,13 @@
     max-width: 1600px;
     margin: 0 auto;
 }
-nav a {
+/* nav a {
     text-align: center;
     color: white;
     text-align: center;
     text-decoration: none;
     padding: 35px;
-}
+} */
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
 }
@@ -35,12 +35,55 @@ header {
     display: grid;
     grid-template-columns: 150px auto;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    background-color: #072A6C;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;  /* Display list items horizontally */
+    justify-content: space-between;  /* Spread items across the full width */
+    padding: 0;
+    margin: 0;
+    width: 100%;  /* Make sure the ul takes up full width */
+}
+
+nav li {
+    margin: 0;
+    flex: 1;  /* Ensure each list item takes up equal space */
+    text-align: center;  /* Center text inside each menu item */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 35px;
+    display: block;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav li.active a {
+    color: black;
+    background-color: #8ECAE6;
+}
 
 nav a:hover {
+    color: black;
+    background-color: #8ECAE6; 
+}
+
+/* nav a:hover {
     background-color: #8ECAE6;
     color: black;
 
-}
+} */
 .book, .join {
     background-color: #8ECAE6;
     color: black;
@@ -125,10 +168,10 @@ h2 {
 main section img {
     box-sizing: border-box;
 }
-nav {
+/* nav {
     display: flex;
     justify-content: space-around;
-}
+}*/
 #hero {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
