@@ -19,7 +19,7 @@ body {
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    background-color: #59253A;
+    background-color: #072A6C;
     padding: 20px;
 }
 
@@ -31,7 +31,7 @@ body {
 
 h1, h2 {
     font-family: 'Rock Salt', serif;
-    color: #59253A;
+    color: #072A6C;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -49,7 +49,7 @@ nav {
     justify-content: space-between;
     width: 100%; 
     padding: 0;
-    background-color: #F7CAC9;
+    background-color: #072A6C;
     flex-wrap: wrap; 
 }
 
@@ -68,7 +68,7 @@ nav li {
 }
 
 nav a {
-    color: #333333;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 1rem;
@@ -78,13 +78,13 @@ nav a {
 }
 
 nav li.active a {
-    color: #FFFFFF;
-    background-color: #59253A;
+    color: #072A6C;
+    background-color: white;
 }
 
 nav a:hover {
-    color: #FFFFFF;
-    background-color: #59253A; 
+    color: #072A6C;
+    background-color: white; 
 }
 
 main {
@@ -103,16 +103,16 @@ main {
 }
 
 .parent section {
-    border: 1px solid #59253A;
-    background-color: #F7CAC9; 
+    border: 1px solid #072A6C;
+    background-color: #8ECAE6; 
     border-radius: 10px;
     overflow: hidden;
     margin: 1rem 0;
 }
 
 .parent h2 {
-    background-color: #59253A;
-    color: #FFFFFF;
+    background-color: #072A6C;
+    color: white;
     display: block;
     text-align: center;
     padding: 0.75rem 0;
@@ -126,7 +126,7 @@ main {
 footer {
     width: 100%;
     padding: 1rem;
-    background-color: #59253A;
+    background-color: #072A6C;
     color: #FFFFFF;
     text-align: center;
     font-size: 0.9rem;
@@ -139,7 +139,7 @@ footer {
     text-decoration: none;
     padding: .5rem .75rem;
     background-color: #eee;
-    color: #000;
+    color: white;
     cursor: pointer;
 }
 
@@ -168,7 +168,7 @@ footer {
     padding: 0.75rem;
     text-align: left;
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: 700;
     transition: 0.5s;
     font-size: clamp(1rem, 2vmin, 1.5rem);
@@ -181,4 +181,29 @@ footer {
 
 .navigation.show {
     display: block;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* Light text */
+}
+
+main.dark-mode {
+    background-color: #444444; /* Darker background for main */
+    color: #FFFFFF; /* Light text for main */
+}
+
+/* Button styles */
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #072A6C; /* Dark color for the button */
+    transition: color 0.3s;
+}
+
+#darkModeToggle:hover {
+    color: #FFFFFF; /* Change color on hover */
 }
