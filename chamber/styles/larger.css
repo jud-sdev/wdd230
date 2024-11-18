@@ -1,38 +1,45 @@
-@media screen and (max-width: 900px) {
-    #hero, .home-grid {
-        display: block;
-        height: auto;
+/* Large Screen Styles */
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 20px 40px;
     }
-    nav, footer {
-        flex-direction: column;
-    }
-    nav a {
-        display: block;
-        padding: 15px;
-    }
-    #hero {
-        margin-top: 0;
-    }
+
     #hero-msg {
-        margin-top: 0;
+        margin-top: 50px;
     }
-    #hero-msg h4 {
-        display: none;
+
+    nav ul {
+        flex-direction: row; /* Horizontal navigation */
+        justify-content: center;
     }
-    .home-title {
-        font-size: 25px;
-        color: #6f7364;
+
+    .home-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+        gap: 30px;
+        margin: 40px auto;
+        max-width: 1200px;
     }
-    .rivers-card, .camping-card, .rapids-card { 
-        margin: 50px auto;
-        width: 60%;
+
+    .rivers-card, .camping-card, .rapids-card {
+        margin: 0;
     }
+
     #background {
-        display: none;
-    }
-    .mountains, .msg {
-        width: 80%;
         display: block;
-        margin: 0 auto;
+        height: 200px;
+        background-color: #8ECAE6;
+        grid-column: 1 / -1;
+    }
+
+    .msg {
+        margin: 40px auto;
+        max-width: 800px;
+        padding: 40px;
+    }
+
+    .book {
+        padding: 15px 30px;
     }
 }
+
