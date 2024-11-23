@@ -19,48 +19,45 @@
     <div id="content">
         <header>
             <a href="index.html" id="logo_link">
-                <!-- <img class="logo" src="images/chamber.png" alt="Lagos Chamber of Commerce"> -->
+                <img class="logo" src="images/chamber.png" alt="Lagos Chamber of Commerce">
             </a>
             <a id="menu" href="#"></a>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Discover</a></li>
-                <li><a href="#">Directory</a></li>
-                <li><a href="#">Join</a></li>
-            </ul>
-        </nav>
-        <div id="hero">
-            <div id="hero-box">
-                <img id="hero-img" src="images/lagos.jpg" alt="Lagos, Nigeria">
-            </div>
-        </div>
-        <section id="hero-msg">
-            <h1 class="home-title">Lagos Chamber of Commerce</h1>
-            <h4>Empowering Businesses in Lagos</h4>
-            <div class="botton-box">
-                <a class="book" href="#">Join the Chamber</a>
-            </div>
-        </section>
         <main class="home-grid">
-            <section class="rivers-card">
-                <!-- <img class="card-img" src="images/rivers.jpg" alt="river in forest"> -->
-                <!-- <img class="icon" src="images/river_icon.png" alt="river icon"> -->
-                <h2>Trade</h2>
+            <div id="hero">
+                <div id="hero-box">
+                    <img id="hero-img" src="images/lagos.jpg" alt="Lagos, Nigeria">
+                </div>
+            </div>
+            <section id="hero-msg">
+                <h1 class="home-title">Lagos Chamber of Commerce</h1>
+                <h4>Empowering Businesses in Lagos</h4>
+                <div class="botton-box">
+                    <a class="book" href="#">Join the Chamber</a>
+                </div>
             </section>
-            <section class="camping-card">
-                <!-- <img class="card-img" src="images/camping.jpg" alt="tent in mountains"> -->
-                <!-- <img class="icon" src="images/fire_icon.png" alt="fire icon"> -->
-                <h2>Networking</h2>
-            </section>
-            <section class="rapids-card">
-                <!-- <img class="card-img" src="images/rapids.jpg" alt="rafting boat"> -->
-                <!-- <img class="icon" src="images/oars.png" alt="oars icon"> -->
-                <h2>Business Growth</h2>
-            </section>
-            <div id="background"></div>
-            <!-- <img class="mountains" src="images/mountains.jpg" alt="Misty mountains"> -->
+            <div class="card-container">
+                <section class="card current-event">
+                    <h3>Current Events</h3>
+                    <p>Stay updated with the latest events happening around Lagos.</p>
+                </section>
+                <section class="card weather-card">
+                    <h3>Weather Updates</h3>
+                    <p>Get real-time weather updates for Lagos.</p>
+                </section>
+                <section class="card spotlight-advertisement">
+                    <h3>Spotlight Advertisements</h3>
+                    <p>Discover top companies making a difference in Lagos.</p>
+                </section>
+            </div>
             <section class="msg">
                 <h2>Empowering Businesses in Lagos</h2>
                 <p>
@@ -68,13 +65,24 @@
                     fostering partnerships to promoting trade and advocating for policies, we are committed to driving
                     economic growth and success for all businesses in Lagos and beyond.
                 </p>
-                <!-- <a class='join' href="#">Join Us</a> -->
             </section>
         </main>
         <footer>
-            <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
-            <p id="lastModified"></p>
-        </footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: ebigidejude@yahoo.com</p>
+                    <p>Phone: +2348108510668</p>
+                    <p>Address: Lagos, Nigeria</p>
+                </div>
+                <div class="dev-info">
+                    <h3>Development Information</h3>
+                    <p>Project by: Ebigide Jude</p>
+                    <p>Course: WDD 230 Web Development</p>
+                    <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
+                </div>
+            </div>
+        </footer>        
         <script src="scripts/chamber.js"></script>
     </div>
 </body>

@@ -1,45 +1,53 @@
-/* Large Screen Styles */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+    /* Header layout */
     header {
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+
+    #menu {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    .navigation {
+        display: flex;
         flex-direction: row;
-        padding: 20px 40px;
+        justify-content: flex-end;
+        align-items: center;
+        position: static;
+        background-color: transparent;
+        width: auto;
     }
 
-    #hero-msg {
-        margin-top: 50px;
+    .navigation li {
+        padding: 0 1em;
     }
 
-    nav ul {
-        flex-direction: row; /* Horizontal navigation */
-        justify-content: center;
+    .navigation li a {
+        color: white;
     }
 
-    .home-grid {
-        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
-        gap: 30px;
-        margin: 40px auto;
+    /* Hero section */
+    #hero-img {
+        height: 400px;
+    }
+
+    /* Card layout */
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        padding: 2em;
         max-width: 1200px;
+        margin: auto;
     }
 
-    .rivers-card, .camping-card, .rapids-card {
-        margin: 0;
+    /* Main content */
+    main {
+        max-width: 1200px;
+        margin: auto;
     }
-
-    #background {
-        display: block;
-        height: 200px;
-        background-color: #8ECAE6;
-        grid-column: 1 / -1;
-    }
-
-    .msg {
-        margin: 40px auto;
-        max-width: 800px;
-        padding: 40px;
-    }
-
-    .book {
-        padding: 15px 30px;
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
     }
 }
-
