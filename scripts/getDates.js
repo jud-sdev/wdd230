@@ -42,3 +42,17 @@ darkModeButton.addEventListener("click", () => {
         darkModeButton.textContent = "🌙"; // Moon icon for dark mode
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const visitsPlaceholder = document.getElementById("visitsPlaceholder");
+    let visits = localStorage.getItem("pageVisits");
+
+    if (!visits) {
+        visits = 1;
+    } else {
+        visits = parseInt(visits) + 1;
+    }
+
+    localStorage.setItem("pageVisits", visits);
+    visitsPlaceholder.textContent = visits;
+});

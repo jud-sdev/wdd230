@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', Helvetica, sans-serif;
-    color: #333333;
+    color: black;
     background-color: #EAEAEA;
     line-height: 1.6;
     font-size: 16px;
@@ -103,8 +103,7 @@ main {
 }
 
 .parent section {
-    border: 1px solid #072A6C;
-    background-color: #8ECAE6; 
+    background-color: white; 
     border-radius: 10px;
     overflow: hidden;
     margin: 1rem 0;
@@ -144,11 +143,13 @@ footer {
 }
 
 #menu::before {
-    content: "≡";  
+    content: "≡";
+    color: green; 
 }
 
 #menu.show::before {
-    content: "X"; 
+    content: "X";
+    color: green; 
 }
 
 .navigation {
@@ -206,4 +207,27 @@ main.dark-mode {
 
 #darkModeToggle:hover {
     color: #FFFFFF; /* Change color on hover */
+}
+
+.hero {
+    position: relative;
+    max-width: 960px;
+    margin: auto;
+}
+
+.hero picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background-color: #072A6C;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    white-space: nowrap;
 }
