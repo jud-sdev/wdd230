@@ -213,3 +213,67 @@ footer {
     margin: 0.3em 0;
 }
 
+/* Layout Grid */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Single-column for mobile */
+    gap: 1em;
+    padding: 1em;
+}
+
+.sidebar {
+    background-color: #072A6C;
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.sidebar h2, .sidebar h3 {
+    color: #8ECAE6;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.gallery figure {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.gallery img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery figcaption {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.gallery figure:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+figure {
+    width: 600px;
+    margin: 0 auto; /* Center the figure container */
+    text-align: center; /* Center-align the text */
+}
+figcaption {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #333; /* Optional: Adjust text color */
+}
+figcaption strong {
+    display: block; /* Ensures the title appears on a separate line */
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: #000; /* Optional: Make titles stand out */
+}

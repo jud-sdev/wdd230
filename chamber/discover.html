@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <title>Lagos Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="author" content="Ebigide Jude">
+    <meta name="description"
+        content="Official website of the Lagos Chamber of Commerce, providing information about business opportunities, events, and resources for businesses in Lagos.">
+    <meta property="og:title" content="Ebigide Jude's Website">
+    <meta property="og:type" content="Homepage">
+    <meta property="og:image" content="https://jud-sdev.github.io/wdd230/images/profile.jpg">
+    <meta property="og:url" content="https://jud-sdev.github.io/wdd230/">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <a href="index.html" id="logo_link">
+                <img class="logo" src="images/chamber.png" alt="Lagos Chamber of Commerce">
+            </a>
+            <a id="menu" href="#"></a>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="layout">
+            <!-- Sidebar Section -->
+            <aside class="sidebar">
+                <h2>Information</h2>
+                <section>
+                    <h3>Welcome Message</h3>
+                    <div id="visit-message">Loading...</div>
+                </section>
+                <section>
+                    <h3>Demographics</h3>
+                    <p>Serving over 10,000 businesses in Lagos.</p>
+                    <p>65% of members are small businesses.</p>
+                </section>
+
+                <!-- Statistical Data -->
+                <section>
+                    <h3>Statistical Data</h3>
+                    <p>Annual growth: 8%.</p>
+                    <p>Exports from members: $2 billion/year.</p>
+                </section>
+
+                <!-- Events -->
+                <section>
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                        <li>Annual Expo - Dec 10</li>
+                        <li>Business Workshop - Jan 15</li>
+                        <li>Networking Gala - Feb 20</li>
+                    </ul>
+                </section>
+
+                <!-- Attractions -->
+                <section>
+                    <h3>Attractions</h3>
+                    <ul>
+                        <li>Victoria Island Business Hub</li>
+                        <li>CMS marketplace, Lagos</li>
+                        <li>La Campagne Tropicana</li>
+                        <li>Balogun Market, Lagos Island</li>
+                        <li>Apapa Port and Business District</li>
+                        <li>Dangote Petroleum Refinery and Petrochemicals</li>
+                    </ul>
+                </section>
+
+                <!-- Calendar -->
+                <section>
+                    <h3>Calendar</h3>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=judmc.26@gmail.com&ctz=Africa/Lagos"
+                        style="border: 0; background-color: azure; color: black; width: 100%; height: 400px;" frameborder="0" scrolling="no">
+                    </iframe>
+
+                </section>
+            </aside>
+
+            <!-- Main Content Section -->
+            <main class="gallery">
+                <figure>
+                    <img src="images/cms.webp" alt="CMS Marketplace, Lagos" loading="lazy" width="600">
+                    <figcaption>
+                        <strong>CMS Marketplace, Lagos</strong>
+                        A bustling hub of trade and culture, CMS Marketplace captures the vibrant spirit of Lagos with its dynamic energy and rich history.
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/Balogun-market.webp" alt="Balogun Market, Lagos Island" loading="lazy" width="600">
+                    <figcaption>
+                        <strong>Balogun Market, Lagos Island</strong>
+                        Experience the pulse of Lagos at Balogun Market—Nigeria's largest open-air marketplace, offering everything from textiles to treasures.
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/apapa.webp" alt="Apapa Port and Business District" loading="lazy" width="600">
+                    <figcaption>
+                        <strong>Apapa Port and Business District</strong>
+                        The gateway to Nigeria's global trade, Apapa Port and Business District drives the nation's economy with its vibrant commercial activity.
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/La_Campagne.webp" alt="La Campagne Tropicana" loading="lazy" width="600">
+                    <figcaption>
+                        <strong>La Campagne Tropicana</strong>
+                        Escape to paradise at La Campagne Tropicana, where serene beaches meet lush greenery for the ultimate tropical retreat.
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/vi.webp" alt="Victoria Island Business Hub" loading="lazy" width="600">
+                    <figcaption>
+                        <strong>Victoria Island Business Hub</strong>
+                        The beating heart of Lagos commerce—Victoria Island is where innovation meets opportunity, with stunning views and a thriving corporate ecosystem.
+                    </figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="images/Dangote_Refinery.webp" alt="Dangote Petroleum Refinery and Petrochemicals" loading="lazy" width="600">
+                    <figcaption>
+                        <strong>Dangote Petroleum Refinery and Petrochemicals</strong>
+                        A marvel of modern engineering, the Dangote Refinery is set to transform Africa's energy landscape and redefine industrial excellence.
+                    </figcaption>
+                </figure>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: ebigidejude@yahoo.com</p>
+                    <p>Phone: +2348108510668</p>
+                    <p>Address: Lagos, Nigeria</p>
+                </div>
+                <div class="dev-info">
+                    <h3>Development Information</h3>
+                    <p>Project by: Ebigide Jude</p>
+                    <p>Course: WDD 230 Web Development</p>
+                    <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/chamber.js"></script>
+    </div>
+</body>
+
+</html>
