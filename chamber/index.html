@@ -2,19 +2,23 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles/normalize.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
     <title>Lagos Chamber of Commerce</title>
     <link rel="icon" href="favicon.ico">
     <meta name="author" content="Ebigide Jude">
     <meta name="description" content="Official website of the Lagos Chamber of Commerce, providing information about business opportunities, events, and resources for businesses in Lagos.">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Ebigide Jude's Website">
-    <meta property="og:type" content="Homepage">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://jud-sdev.github.io/wdd230/images/profile.jpg">
     <meta property="og:url" content="https://jud-sdev.github.io/wdd230/">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 
 <body>
@@ -23,7 +27,7 @@
             <a href="index.html" id="logo_link">
                 <img class="logo" src="images/chamber.png" alt="Lagos Chamber of Commerce">
             </a>
-            <a id="menu" href="#"></a>
+            <a id="menu" href="#menu">Menu</a>
             <nav>
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
@@ -73,7 +77,7 @@
             <div class="footer-content">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
-                    <p>Email: ebigidejude@yahoo.com</p>
+                    <p>Email: <a href="mailto:ebigidejude@yahoo.com">ebigidejude@yahoo.com</a></p>
                     <p>Phone: +2348108510668</p>
                     <p>Address: Lagos, Nigeria</p>
                 </div>
@@ -84,7 +88,7 @@
                     <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
                 </div>
             </div>
-        </footer>        
+        </footer>
         <script src="scripts/chamber.js"></script>
     </div>
 </body>

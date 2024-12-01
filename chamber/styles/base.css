@@ -6,14 +6,13 @@ body {
     line-height: 1.6;
     box-sizing: border-box;
     background-color: #f9f9f9;
-    /* Light background for a clean look */
     color: #333;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    align-items: right;
+    align-items: center; /* Changed 'right' to 'center' for proper alignment */
     background-color: #072A6C;
     color: white;
     padding: 0.5em 1em;
@@ -29,27 +28,20 @@ header {
     cursor: pointer;
     color: white;
     display: block;
-    /* Only visible on mobile */
-    margin-left: auto;
-    /* Remove this line */
-    margin-right: auto;
-    /* Center the hamburger menu */
+    text-align: center;
 }
 
 #menu.open::after {
-    content: '❎';
-    /* Close icon */
+    content: '❎'; /* Close icon */
 }
 
 #menu::after {
-    content: '☰';
-    /* Hamburger icon */
+    content: '☰'; /* Hamburger icon */
 }
 
 /* Mobile navigation menu */
 .navigation {
     display: none;
-    /* Hidden on mobile initially */
     flex-direction: column;
     background-color: #072A6C;
     position: absolute;
@@ -80,7 +72,6 @@ header {
 
 .navigation li a.active {
     background-color: #FFA500;
-    /* Highlight active page */
     color: #072A6C;
 }
 
@@ -88,21 +79,17 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    /* Center the nav items */
     width: 100%;
 }
 
 ul.navigation {
     display: flex;
-    /* Use flexbox to space out menu items */
     justify-content: space-between;
-    /* Space out items evenly */
     padding: 0;
     margin: 0;
     list-style: none;
     width: 100%;
     max-width: 800px;
-    /* Optional: Limit the width of the navigation */
 }
 
 .navigation li {
@@ -113,15 +100,6 @@ ul.navigation {
     color: white;
     text-decoration: none;
 }
-
-/* .navigation li a:hover {
-    background-color: #6A0DAD; 
-}
-
-.navigation li a.active {
-    background-color: #FFA500; 
-    color: #4B0082;
-} */
 
 /* Hero section */
 #hero {
@@ -216,7 +194,7 @@ footer {
 /* Layout Grid */
 .layout {
     display: grid;
-    grid-template-columns: 1fr; /* Single-column for mobile */
+    grid-template-columns: 1fr;
     gap: 1em;
     padding: 1em;
 }
@@ -228,7 +206,8 @@ footer {
     border-radius: 5px;
 }
 
-.sidebar h2, .sidebar h3 {
+.sidebar h2,
+.sidebar h3 {
     color: #8ECAE6;
 }
 
@@ -263,17 +242,19 @@ footer {
 
 figure {
     width: 600px;
-    margin: 0 auto; /* Center the figure container */
-    text-align: center; /* Center-align the text */
+    margin: 0 auto;
+    text-align: center;
 }
+
 figcaption {
     font-size: 16px;
     margin-top: 8px;
-    color: #333; /* Optional: Adjust text color */
+    color: #333;
 }
+
 figcaption strong {
-    display: block; /* Ensures the title appears on a separate line */
+    display: block;
     font-size: 18px;
     margin-bottom: 4px;
-    color: #000; /* Optional: Make titles stand out */
+    color: #000;
 }
