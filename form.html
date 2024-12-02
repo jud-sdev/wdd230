@@ -62,10 +62,12 @@
                  title="Please enter a valid BYUI email address.">
           
           <!-- Page Rating -->
-          <label for="rating">Page Rating (1 to 10):</label>
-          <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" oninput="displayRating(this.value)">
-          <span id="rating-value">5</span>
-    
+        <label for="rating">Page Rating (1 to 10):</label>
+        <div class="rating-container">
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" oninput="syncRatingValue()">
+            <input type="number" id="rating-value" min="1" max="10" step="1" value="5" onchange="syncRatingSlider()">
+        </div>
+        
           <!-- Submit Button -->
           <button type="submit">Submit</button>
         </form>

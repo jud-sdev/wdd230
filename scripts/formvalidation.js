@@ -42,23 +42,51 @@ darkModeButton.addEventListener("click", () => {
         darkModeButton.textContent = "🌙"; // Moon icon for dark mode
     }
 });
-// Ensure passwords match
-document.querySelector('form').addEventListener('submit', function (event) {
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
-    const error = document.getElementById('password-error');
-  
-    if (password !== confirmPassword) {
-      error.textContent = "Passwords do not match.";
-      document.getElementById('password').value = '';
-      document.getElementById('confirm-password').value = '';
-      document.getElementById('password').focus();
-      event.preventDefault();
-    }
-  });
-  
-  // Display range value
-  document.getElementById('rating').addEventListener('input', function (event) {
-    document.getElementById('rating-value').textContent = event.target.value;
-  });
-  
+document.addEventListener("DOMContentLoaded", function () {
+    // Handle password confirmation
+    const password = document.querySelector("#password");
+    const confirmPassword = document.querySelector("#confirm-password");
+    const passwordError = document.querySelector("#password-error");
+
+    confirmPassword.addEventListener("input", function () {
+        if (password.value !== confirmPassword.value) {
+            passwordError.textContent = "Passwords do not match!";
+            confirmPassword.setCustomValidity("Passwords do not match!");
+        } else {
+            passwordError.textContent = "";
+            confirmPassword.setCustomValidity("");
+        }
+    });
+
+    // Handle form submission
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+        if (password.value !== confirmPassword.value) {
+            e.preventDefault();
+            passwordError.textContent = "Passwords must match!";
+            confirmPassword.focus();
+            confirmPassword.value = "";
+            password.value = "";
+        }
+    });
+
+    // Get the slider and number input elements
+    const slider = document.querySelector("#rating");
+    const numberInput = document.querySelector("#rating-value");
+
+    // Synchronize the slider value with the number input
+    slider.addEventListener("input", function () {
+        numberInput.value = slider.value;
+    });
+
+    // Synchronize the number input value with the slider
+    numberInput.addEventListener("input", function () {
+        // Ensure the input value stays within the min/max range
+        if (numberInput.value < slider.min) {
+            numberInput.value = slider.min;
+        } else if (numberInput.value > slider.max) {
+            numberInput.value = slider.max;
+        }
+        slider.value = numberInput.value;
+    });
+});

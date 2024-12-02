@@ -8,18 +8,18 @@
     --font-family: "Arial", sans-serif;
     --font-size: 16px; /* Base font size */
     --spacing: 1rem; /* Base spacing for margins and paddings */
-  }
-  
-  body {
+}
+
+body {
     font-family: var(--font-family);
     font-size: var(--font-size);
     background-color: #f9f9f9; /* Page background color */
     margin: 0;
     padding: 0;
     color: var(--font-color);
-  }
-  
-  .styled-form {
+}
+
+.styled-form {
     max-width: 450px;
     margin: 2rem auto;
     padding: 2rem;
@@ -27,18 +27,18 @@
     border-radius: 8px;
     background-color: var(--secondary-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for emphasis */
-  }
-  
-  .styled-form label {
+}
+
+.styled-form label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: var(--font-color);
-  }
-  
-  .styled-form input,
-  .styled-form button,
-  .styled-form span {
+}
+
+.styled-form input,
+.styled-form button,
+.styled-form span {
     display: block;
     width: calc(100% - 2 * var(--spacing)); /* Account for padding */
     margin-bottom: var(--spacing);
@@ -46,15 +46,15 @@
     font-size: var(--font-size);
     border: 1px solid #ccc; /* Light border for inputs */
     border-radius: 4px;
-  }
-  
-  .styled-form input:focus {
+}
+
+.styled-form input:focus {
     border-color: var(--primary-color);
     outline: none;
     box-shadow: 0 0 4px var(--primary-color);
-  }
-  
-  .styled-form button {
+}
+
+.styled-form button {
     background-color: var(--button-color);
     color: white;
     padding: 0.75rem;
@@ -64,27 +64,34 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .styled-form button:hover {
+}
+
+.styled-form button:hover {
     background-color: var(--button-hover-color);
-  }
-  
-  .styled-form .error-message {
+}
+
+.styled-form .error-message {
     color: var(--error-color);
     font-size: 0.9rem;
     margin-top: -0.5rem;
     margin-bottom: var(--spacing);
-  }
-  
-  .styled-form .range-container {
+}
+
+.styled-form .range-container,
+.styled-form .rating-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-  
-  .styled-form input[type="range"] {
-    flex: 1;
-    margin-right: var(--spacing);
-  }
-  
+    gap: var(--spacing); /* Spacing between slider and number input */
+}
+
+.styled-form input[type="range"] {
+    flex-grow: 1; /* Ensure the slider occupies most of the width */
+    margin: 0; /* Reset default margins for better alignment */
+}
+
+.styled-form input[type="number"] {
+    width: 50px; /* Fixed width for number input */
+    text-align: center; /* Center-align the text */
+    padding: 0.25rem; /* Reduced padding for a compact look */
+    font-size: var(--font-size);
+}
