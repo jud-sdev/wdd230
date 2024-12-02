@@ -13,6 +13,7 @@
     <meta name="author" content="Ebigide Jude">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="icon" href="favicon.ico">
     <meta property="og:title" content="Ebigide Jude's Website">
     <meta property="og:type" content="Homepage">
@@ -31,50 +32,50 @@
     <a id="menu" href="#"></a>
     <nav>
         <ul class="navigation">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="chamber/index.html">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
-            <li><a href="#">Form</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
         </ul>
     </nav>
     <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/hero-small.webp" media="(max-width: 400px)">
-                <source srcset="images/hero-large.webp" media="(min-width: 401px)">
-                <img src="images/hero-large.webp" alt="Favorite Latter-day Temple" width="960" height="540" loading="lazy">
-            </picture>
-            <div class="overlay">
-                <p>Aba Nigeria Temple</p>
-            </div>
-        </div>
-        <h1>WDD 230: Web Frontend Development</h1>
-        <div class="parent">
-            <section class="card">
-                <h2>Learning Activities</h2>
-                <ul>
-                    <li>Week 03: <a href="week03/images/landscape.webp">WebP</a></li>
-                    <li><a href=""></a></li>
-                </ul>
-            </section>
-            <section class="card">
-                <h2>Information</h2>
-                <p>Weather: <span id="weatherPlaceholder">Data not available</span></p>
-                <p>Page Visits: <span id="visitsPlaceholder">0</span></p>
-            </section>
-        </div>
-
-        <!-- Embedded Google Map -->
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.647552590688!2d3.378917614115931!3d6.428054795345225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b20777ee839%3A0xe33b1234d5b1234!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1692551220813!5m2!1sen!2sng"
-            width="960" height="540" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <h1>Contact Form</h1>
+        <form class="styled-form" action="record.html" method="get" novalidate>
+          <!-- Username -->
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          
+          <!-- Password -->
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" 
+                 title="Password must be at least 8 alpha-numeric characters.">
+          
+          <!-- Confirm Password -->
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+          <span id="password-error" class="error-message"></span>
+    
+          <!-- Email -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required 
+                 pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
+                 title="Please enter a valid BYUI email address.">
+          
+          <!-- Page Rating -->
+          <label for="rating">Page Rating (1 to 10):</label>
+          <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" oninput="displayRating(this.value)">
+          <span id="rating-value">5</span>
+    
+          <!-- Submit Button -->
+          <button type="submit">Submit</button>
+        </form>
     </main>
     <footer>
         <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/formvalidation.js"></script>
 </body>
 
 </html>
