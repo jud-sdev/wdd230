@@ -240,11 +240,6 @@ footer .contact-info a {
     color: #555;
 }
 
-.gallery figure:hover img {
-    transform: scale(1.1);
-    filter: brightness(0.8);
-}
-
 figure {
     width: 600px;
     margin: 0 auto;
