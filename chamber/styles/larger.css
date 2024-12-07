@@ -55,4 +55,10 @@
     .gallery {
         grid-template-columns: 1fr;
     }
+
+    .form-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 2em;
+        align-items: start;
+    }
 }

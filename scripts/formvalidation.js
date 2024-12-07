@@ -43,49 +43,61 @@ darkModeButton.addEventListener("click", () => {
     }
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // Handle password confirmation
-    const password = document.querySelector("#password");
-    const confirmPassword = document.querySelector("#confirm-password");
-    const passwordError = document.querySelector("#password-error");
+    const form = document.querySelector("form");
 
-    confirmPassword.addEventListener("input", function () {
+    form.addEventListener("submit", function (e) {
+        // Get all required inputs
+        const requiredInputs = form.querySelectorAll("input[required]");
+        let isFormValid = true; // Track the form's validity
+
+        // Loop through required inputs to check validity
+        requiredInputs.forEach((input) => {
+            if (!input.value.trim()) {
+                isFormValid = false; // Mark form as invalid
+                input.classList.add("invalid"); // Add invalid class
+            } else {
+                input.classList.remove("invalid"); // Remove invalid class if filled
+            }
+        });
+
+        // If the form is invalid, prevent submission and show alert
+        if (!isFormValid) {
+            e.preventDefault(); // Prevent form submission
+            alert("Please fill in all required fields.");
+        }
+
+        // Ensure passwords match
+        const password = document.querySelector("#password");
+        const confirmPassword = document.querySelector("#confirm-password");
+        const passwordError = document.querySelector("#password-error");
+
         if (password.value !== confirmPassword.value) {
-            passwordError.textContent = "Passwords do not match!";
-            confirmPassword.setCustomValidity("Passwords do not match!");
+            e.preventDefault(); // Prevent form submission
+            isFormValid = false;
+            passwordError.textContent = "Passwords must match!";
+            confirmPassword.classList.add("invalid");
         } else {
             passwordError.textContent = "";
-            confirmPassword.setCustomValidity("");
+            confirmPassword.classList.remove("invalid");
         }
     });
 
-    // Handle form submission
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function (e) {
-        if (password.value !== confirmPassword.value) {
-            e.preventDefault();
-            passwordError.textContent = "Passwords must match!";
-            confirmPassword.focus();
-            confirmPassword.value = "";
-            password.value = "";
-        }
-    });
-
-    // Get the slider and number input elements
+    // Synchronize range slider and number input
     const slider = document.querySelector("#rating");
     const numberInput = document.querySelector("#rating-value");
 
-    // Synchronize the slider value with the number input
     slider.addEventListener("input", function () {
         numberInput.value = slider.value;
     });
 
-    // Synchronize the number input value with the slider
     numberInput.addEventListener("input", function () {
-        // Ensure the input value stays within the min/max range
-        if (numberInput.value < slider.min) {
+        const value = Math.round(numberInput.value); // Ensure whole number
+        if (value < slider.min) {
             numberInput.value = slider.min;
-        } else if (numberInput.value > slider.max) {
+        } else if (value > slider.max) {
             numberInput.value = slider.max;
+        } else {
+            numberInput.value = value;
         }
         slider.value = numberInput.value;
     });

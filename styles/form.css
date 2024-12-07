@@ -95,3 +95,20 @@ body {
     padding: 0.25rem; /* Reduced padding for a compact look */
     font-size: var(--font-size);
 }
+
+input.invalid {
+    border-color: var(--error-color);
+    background-color: #ffe6e6; /* Light red background for invalid fields */
+}
+
+input.invalid:focus {
+    outline-color: var(--error-color);
+    box-shadow: 0 0 5px var(--error-color); /* Red glow for focus */
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}

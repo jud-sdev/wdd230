@@ -47,3 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     localStorage.setItem('lastVisit', currentVisit);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const timestampInput = document.getElementById("timestamp");
+    if (timestampInput) {
+        const currentTimestamp = new Date().toISOString();
+        timestampInput.value = currentTimestamp;
+    }
+});
