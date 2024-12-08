@@ -7,18 +7,12 @@
         rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebigide Jude - WDD 230 - Web Frontend Development</title>
-    <meta name="description"
-        content="WDD 230 - Web Frontend Development: Course assignment portal by Ebigide Jude. This website is dedicated to developing responsive web design skills through hands-on projects and tutorials.">
-    <meta name="author" content="Ebigide Jude">
+    <title>Contact Form - Lagos Chamber of Commerce</title>
+    <meta name="description" content="Fill out this form to submit your details and provide feedback on the website.">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="icon" href="favicon.ico">
-    <meta property="og:title" content="Ebigide Jude's Website">
-    <meta property="og:type" content="Homepage">
-    <meta property="og:image" content="https://jud-sdev.github.io/wdd230/images/profile.jpg">
-    <meta property="og:url" content="https://jud-sdev.github.io/wdd230/">
 </head>
 
 <body>
@@ -29,7 +23,7 @@
         </div>
         <button id="darkModeToggle">🌙</button>
     </header>
-    <a id="menu" href="#"></a>
+
     <nav>
         <ul class="navigation">
             <li><a href="index.html">Home</a></li>
@@ -38,44 +32,51 @@
             <li class="active"><a href="form.html">Form</a></li>
         </ul>
     </nav>
+
     <main>
         <h1>Contact Form</h1>
         <form class="styled-form" action="record.html" method="get" novalidate>
-          <!-- Username -->
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-          
-          <!-- Password -->
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" 
-                 title="Password must be at least 8 alpha-numeric characters.">
-          
-          <!-- Confirm Password -->
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
-          <span id="password-error" class="error-message"></span>
-    
-          <!-- Email -->
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required 
-                 pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
-                 title="Please enter a valid BYUI email address.">
-          
-          <!-- Page Rating -->
-        <label for="rating">Page Rating (1 to 10):</label>
-        <div class="rating-container">
-            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" oninput="syncRatingValue()">
-            <input type="number" id="rating-value" min="1" max="10" step="1" value="5" onchange="syncRatingSlider()">
-        </div>
-        
-          <!-- Submit Button -->
-          <button type="submit">Submit</button>
+
+            <!-- Username -->
+            <label for="username">Username: <span class="required">*</span></label>
+            <input type="text" id="username" name="username" required>
+            <span class="error-message" id="username-error"></span>
+
+            <!-- Password -->
+            <label for="password">Password: <span class="required">*</span></label>
+            <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" 
+                   title="Password must be at least 8 alpha-numeric characters.">
+            <span class="error-message" id="password-error"></span>
+
+            <!-- Confirm Password -->
+            <label for="confirm-password">Confirm Password: <span class="required">*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <span class="error-message" id="confirm-password-error"></span>
+
+            <!-- Email -->
+            <label for="email">Email: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required 
+                   pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
+                   title="Please enter a valid BYUI email address.">
+            <span class="error-message" id="email-error"></span>
+
+            <!-- Page Rating -->
+            <label for="rating">Page Rating (1 to 10):</label>
+            <div class="rating-container">
+                <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5" oninput="syncRatingValue()">
+                <output id="rating-value">5</output>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
         </form>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
+        <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos, Nigeria</p>
         <p id="lastModified"></p>
     </footer>
+
     <script src="scripts/getDates.js"></script>
     <script src="scripts/formvalidation.js"></script>
 </body>

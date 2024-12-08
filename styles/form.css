@@ -1,114 +1,94 @@
+/* Root Variables */
 :root {
-    --primary-color: #0056b3; /* Main form accent color */
-    --secondary-color: #eaf4ff; /* Form background color */
-    --button-color: #004080; /* Button background color */
-    --button-hover-color: #002d5a; /* Button hover background color */
-    --font-color: #333; /* General text color */
-    --error-color: #d9534f; /* Error message color */
-    --font-family: "Arial", sans-serif;
-    --font-size: 16px; /* Base font size */
-    --spacing: 1rem; /* Base spacing for margins and paddings */
+    --primary-color: #0056b3;
+    --error-color: #d9534f;
+    --background-color: #f9f9f9;
+    --font-color: #333;
+    --spacing: 1rem;
+    --input-padding: 0.75rem;
 }
 
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    background-color: #f9f9f9; /* Page background color */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--font-color);
     margin: 0;
     padding: 0;
-    color: var(--font-color);
 }
 
-.styled-form {
-    max-width: 450px;
-    margin: 2rem auto;
+header h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     padding: 2rem;
-    border: 1px solid var(--primary-color);
+    background-color: white;
     border-radius: 8px;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for emphasis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.styled-form label {
+label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: var(--font-color);
 }
 
-.styled-form input,
-.styled-form button,
-.styled-form span {
-    display: block;
-    width: calc(100% - 2 * var(--spacing)); /* Account for padding */
-    margin-bottom: var(--spacing);
-    padding: 0.5rem;
-    font-size: var(--font-size);
-    border: 1px solid #ccc; /* Light border for inputs */
+.required {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: var(--input-padding);
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.styled-form input:focus {
+input:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 4px var(--primary-color);
-}
-
-.styled-form button {
-    background-color: var(--button-color);
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    font-size: var(--font-size);
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.styled-form button:hover {
-    background-color: var(--button-hover-color);
-}
-
-.styled-form .error-message {
-    color: var(--error-color);
-    font-size: 0.9rem;
-    margin-top: -0.5rem;
-    margin-bottom: var(--spacing);
-}
-
-.styled-form .range-container,
-.styled-form .rating-container {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing); /* Spacing between slider and number input */
-}
-
-.styled-form input[type="range"] {
-    flex-grow: 1; /* Ensure the slider occupies most of the width */
-    margin: 0; /* Reset default margins for better alignment */
-}
-
-.styled-form input[type="number"] {
-    width: 50px; /* Fixed width for number input */
-    text-align: center; /* Center-align the text */
-    padding: 0.25rem; /* Reduced padding for a compact look */
-    font-size: var(--font-size);
 }
 
 input.invalid {
     border-color: var(--error-color);
-    background-color: #ffe6e6; /* Light red background for invalid fields */
-}
-
-input.invalid:focus {
-    outline-color: var(--error-color);
-    box-shadow: 0 0 5px var(--error-color); /* Red glow for focus */
+    background-color: #ffe6e6;
 }
 
 .error-message {
     color: var(--error-color);
-    font-size: 0.9rem;
-    margin-top: -0.5rem;
+    font-size: 0.875rem;
     margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--input-padding);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.rating-container output {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
