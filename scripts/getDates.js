@@ -56,3 +56,51 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("pageVisits", visits);
     visitsPlaceholder.textContent = visits;
 });
+
+// Select HTML elements for weather info
+const currentTemp = document.getElementById('weatherPlaceholder');
+const weatherIcon = document.createElement('img'); // Create an image element for the weather icon
+const captionDesc = document.createElement('figcaption'); // Create a figcaption element for description
+
+// Append the icon and description dynamically to the Information card
+const infoCard = document.querySelector('.card:nth-child(2)');
+infoCard.appendChild(weatherIcon);
+infoCard.appendChild(captionDesc);
+
+// Define the OpenWeatherMap API URL with latitude, longitude, and other parameters
+const apiKey = 'f1d880ba027bef90c5cb579d72f7f15b';
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=6.4281&lon=3.3789&units=imperial&appid=${apiKey}`;
+
+// Function to fetch weather data
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Weather API Response:', data); // For testing and debugging
+            displayResults(data);
+        } else {
+            throw new Error(`Response Error: ${response.statusText}`);
+        }
+    } catch (error) {
+        console.error('Fetch Error:', error);
+    }
+}
+
+// Function to display the weather data
+function displayResults(data) {
+    // Display temperature
+    currentTemp.innerHTML = `${data.main.temp.toFixed(1)}&deg;F`;
+
+    // Display weather icon
+    const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    weatherIcon.setAttribute('src', iconSrc);
+    weatherIcon.setAttribute('alt', data.weather[0].description);
+
+    // Display weather description
+    const desc = data.weather[0].description;
+    captionDesc.textContent = `${desc.charAt(0).toUpperCase()}${desc.slice(1)}`;
+}
+
+// Call the API fetch function
+apiFetch();

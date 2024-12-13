@@ -1,0 +1,70 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          {
+            "url":"week01/holygrail.html",
+            "title":"HG Layout"
+          },
+          {
+            "url":"week01/media-query.html",
+            "title":"mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {
+            "url":"week02/holygrail.html",
+            "title":"HG Layout"
+          },
+          {
+            "url":"week02/media-query.html",
+            "title":"mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {
+            "url":"week03/holygrail.html",
+            "title":"HG Layout"
+          },
+          {
+            "url":"week03/media-query.html",
+            "title":"mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {
+            "url":"week04/holygrail.html",
+            "title":"HG Layout"
+          },
+          {
+            "url":"week04/media-query.html",
+            "title":"mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          {
+            "url":"week05/holygrail.html",
+            "title":"HG Layout"
+          },
+          {
+            "url":"week05/media-query.html",
+            "title":"mQueries"
+          }
+        ]
+      }
+
+    ]
+}
