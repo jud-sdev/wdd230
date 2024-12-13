@@ -231,3 +231,40 @@ main.dark-mode {
     font-size: 1.5em;
     white-space: nowrap;
 }
+
+#activity-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .week {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+  
+  .week h2 {
+    margin-bottom: 10px;
+  }
+  
+  .week ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .week li {
+    margin-bottom: 8px;
+  }
+  
+  .week a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .week a:hover {
+    text-decoration: underline;
+  }

@@ -4,12 +4,12 @@
         "week": "Week 1",
         "links": [
           {
-            "url":"week01/holygrail.html",
-            "title":"HG Layout"
+            "url": "week01/chamber-site-plan.html",
+            "title": "Chamber Site Plan"
           },
           {
-            "url":"week01/media-query.html",
-            "title":"mQueries"
+            "url": "week01/holygrail.html",
+            "title": "Holy Grail Layout"
           }
         ]
       },
@@ -17,12 +17,12 @@
         "week": "Week 2",
         "links": [
           {
-            "url":"week02/holygrail.html",
-            "title":"HG Layout"
+            "url": "week02/bom.html",
+            "title": "Flexbox Layout"
           },
           {
-            "url":"week02/media-query.html",
-            "title":"mQueries"
+            "url": "week02/design.html",
+            "title": "CSS Grid Layout"
           }
         ]
       },
@@ -30,12 +30,12 @@
         "week": "Week 3",
         "links": [
           {
-            "url":"week03/holygrail.html",
-            "title":"HG Layout"
+            "url": "week03/lazyload.html",
+            "title": "Lazy Loads"
           },
           {
-            "url":"week03/media-query.html",
-            "title":"mQueries"
+            "url": "week03/responsive-images.html",
+            "title": "Responsive Images"
           }
         ]
       },
@@ -43,12 +43,12 @@
         "week": "Week 4",
         "links": [
           {
-            "url":"week04/holygrail.html",
-            "title":"HG Layout"
+            "url": "week04/lazyload.html",
+            "title": "HTML Forms"
           },
           {
-            "url":"week04/media-query.html",
-            "title":"mQueries"
+            "url": "week04/responsive-images.html",
+            "title": "Responsive Design"
           }
         ]
       },
@@ -56,15 +56,11 @@
         "week": "Week 5",
         "links": [
           {
-            "url":"week05/holygrail.html",
-            "title":"HG Layout"
-          },
-          {
-            "url":"week05/media-query.html",
-            "title":"mQueries"
+            "url": "week05/prophets.html",
+            "title": "Web Accessibility"
           }
         ]
       }
-
     ]
-}
+  }
+  
