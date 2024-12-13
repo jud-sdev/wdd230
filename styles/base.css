@@ -48,7 +48,6 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 100%; 
-    padding: 0;
     background-color: #072A6C;
     flex-wrap: wrap; 
 }
@@ -59,15 +58,9 @@ nav ul {
     flex-direction: column; 
     justify-content: space-evenly; 
     width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
-nav li {
-    margin: 0;
-}
-
-nav a {
+nav li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -89,7 +82,6 @@ nav a:hover {
 
 main {
     width: 100%;
-    max-width: 100%;
     padding: 1rem;
     background-color: #EAEAEA; 
     text-align: center;
@@ -106,14 +98,11 @@ main {
     background-color: white; 
     border-radius: 10px;
     overflow: hidden;
-    margin: 1rem 0;
 }
 
 .parent h2 {
     background-color: #072A6C;
     color: white;
-    display: block;
-    text-align: center;
     padding: 0.75rem 0;
 }
 
@@ -154,77 +143,49 @@ footer {
 
 .navigation {
     list-style: none;
-    margin: 0 auto;
-    max-width: 760px;
     display: none;  
 }
-
-.navigation li {
-    display: block; 
-    flex: 1 1 100%;
-}
-
-.navigation a {
-    display: block;
-    padding: 0.75rem;
-    text-align: left;
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    transition: 0.5s;
-    font-size: clamp(1rem, 2vmin, 1.5rem);
-}
-
-/* .navigation a:hover, .navigation a:active {
-    color: white;
-    background-color: black;
-} */
 
 .navigation.show {
     display: block;
 }
 
-/* Dark mode styles */
 body.dark-mode {
-    background-color: #333333; /* Dark background */
-    color: #FFFFFF; /* Light text */
+    background-color: #333333;
+    color: #FFFFFF;
 }
 
 main.dark-mode {
-    background-color: #444444; /* Darker background for main */
-    color: #FFFFFF; /* Light text for main */
+    background-color: #444444;
+    color: #FFFFFF;
 }
 
-/* Button styles */
 #darkModeToggle {
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #072A6C; /* Dark color for the button */
+    color: #072A6C; 
     transition: color 0.3s;
 }
 
 #darkModeToggle:hover {
-    color: #FFFFFF; /* Change color on hover */
+    color: #FFFFFF; 
 }
 
 .hero {
     position: relative;
-    max-width: 960px;
-    margin: auto;
 }
 
 .hero picture img {
-    display: block;
     width: 100%;
     height: auto;
 }
 
 .overlay {
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
+    top: 20px; 
+    left: 20px; 
     background-color: #072A6C;
     color: white;
     padding: 10px;
@@ -237,34 +198,4 @@ main.dark-mode {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .week {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 300px;
-  }
-  
-  .week h2 {
-    margin-bottom: 10px;
-  }
-  
-  .week ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .week li {
-    margin-bottom: 8px;
-  }
-  
-  .week a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-  
-  .week a:hover {
-    text-decoration: underline;
-  }
+}
