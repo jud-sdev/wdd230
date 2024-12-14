@@ -61,4 +61,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentTimestamp = new Date().toISOString();
         timestampInput.value = currentTimestamp;
     }
+
+    // === Member Directory View Toggle ===
+    const memberContainer = document.getElementById('member-container');
+    const gridViewButton = document.getElementById('gridView');
+    const listViewButton = document.getElementById('listView');
+
+    if (memberContainer && gridViewButton && listViewButton) {
+        // Fetch the JSON data
+        fetch('data/members.json')
+            .then(response => response.json())
+            .then(members => {
+                displayMembers(members, 'grid');
+            });
+
+        // Display members in the desired format
+        function displayMembers(members, view) {
+            memberContainer.innerHTML = ''; // Clear container
+            members.forEach(member => {
+                const memberElement = document.createElement('div');
+                memberElement.classList.add('member', view === 'grid' ? 'card' : 'list-item');
+                memberElement.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+                memberContainer.appendChild(memberElement);
+            });
+        }
+
+        // Event Listeners for view toggle
+        gridViewButton.addEventListener('click', () => {
+            memberContainer.classList.add('grid-view');
+            memberContainer.classList.remove('list-view');
+            gridViewButton.classList.add('active');
+            listViewButton.classList.remove('active');
+        });
+
+        listViewButton.addEventListener('click', () => {
+            memberContainer.classList.remove('grid-view');
+            memberContainer.classList.add('list-view');
+            listViewButton.classList.add('active');
+            gridViewButton.classList.remove('active');
+        });
+    } else {
+        console.error("Member container or view toggle buttons not found");
+    }
 });

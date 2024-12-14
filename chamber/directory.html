@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Lagos Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="author" content="Ebigide Jude">
+    <meta name="description" content="Directory of members of the Lagos Chamber of Commerce, showcasing companies, addresses, and contact information.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lagos Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/chamber.png">
+    <meta property="og:url" content="directory.html">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <a href="index.html" id="logo_link">
+                <img class="logo" src="images/chamber.png" alt="Lagos Chamber of Commerce">
+            </a>
+            <a id="menu" href="#menu">Menu</a>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Business Directory</h1>
+            <div class="view-toggle">
+                <button id="gridView" class="active">Grid View</button>
+                <button id="listView">List View</button>
+            </div>
+
+            <section id="member-container" class="grid-view"></section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:ebigidejude@yahoo.com">ebigidejude@yahoo.com</a></p>
+                    <p>Phone: +2348108510668</p>
+                    <p>Address: Lagos, Nigeria</p>
+                </div>
+                <div class="dev-info">
+                    <h3>Development Information</h3>
+                    <p>Project by: Ebigide Jude</p>
+                    <p>Course: WDD 230 Web Development</p>
+                    <p>&copy; <span id="currentYear"></span> Ebigide Jude, Lagos Nigeria</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="scripts/chamber.js"></script>
+    </div>
+</body>
+
+</html>

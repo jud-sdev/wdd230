@@ -66,4 +66,17 @@
         gap: 2em;
         align-items: start;
     }
+    #member-container.grid-view .member {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .member {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .member img {
+        width: 150px;
+        height: 150px;
+    }
 }

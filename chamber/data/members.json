@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Tech Solutions Ltd",
+        "address": "123 Victoria Island, Lagos, Nigeria",
+        "phone": "+2348012345678",
+        "website": "https://techsolutions.ng",
+        "image": "images/tech.webp",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Green Earth Farms",
+        "address": "45 Lekki Phase 1, Lagos, Nigeria",
+        "phone": "+2348023456789",
+        "website": "https://greenearthfarms.ng",
+        "image": "images/green-earth.webp",
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Alpha Construction Co.",
+        "address": "Plot 77 Ikoyi, Lagos, Nigeria",
+        "phone": "+2348034567890",
+        "website": "https://alphaconstruction.ng",
+        "image": "images/alpha.webp",
+        "membershipLevel": "Platinum"
+    },
+    {
+        "name": "Bright Future Schools",
+        "address": "10 Surulere, Lagos, Nigeria",
+        "phone": "+2348045678901",
+        "website": "https://brightfutureschools.ng",
+        "image": "images/bright.webp",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Ultimate Health Pharmacy",
+        "address": "56 Ikeja, Lagos, Nigeria",
+        "phone": "+2348056789012",
+        "website": "https://ultimatehealth.ng",
+        "image": "images/ultimate.webp",
+        "membershipLevel": "Silver"
+    },
+    {
+        "name": "Dynamic Media Hub",
+        "address": "21 Ajah, Lagos, Nigeria",
+        "phone": "+2348067890123",
+        "website": "https://dynamicmediahub.ng",
+        "image": "images/dynamic.webp",
+        "membershipLevel": "Gold"
+    },
+    {
+        "name": "Mega Print House",
+        "address": "34 Yaba, Lagos, Nigeria",
+        "phone": "+2348078901234",
+        "website": "https://megaprinthouse.ng",
+        "image": "images/mega.webp",
+        "membershipLevel": "Bronze"
+    }
+]
