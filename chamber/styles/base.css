@@ -13,7 +13,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Changed 'right' to 'center' for proper alignment */
     background-color: #072A6C;
     color: white;
     padding: 0.5em 1em;
@@ -34,15 +33,12 @@ header {
 
 #menu.open::after {
     content: '❎';
-    /* Close icon */
 }
 
 #menu::after {
     content: '☰';
-    /* Hamburger icon */
 }
 
-/* Mobile navigation menu */
 .navigation {
     display: none;
     flex-direction: column;
@@ -65,7 +61,6 @@ header {
 .navigation li a {
     color: white;
     text-decoration: none;
-    display: block;
 }
 
 .navigation li a:hover {
@@ -78,7 +73,6 @@ header {
     color: #072A6C;
 }
 
-/* Centralized navbar */
 nav {
     display: flex;
     justify-content: center;
@@ -99,17 +93,9 @@ ul.navigation {
     padding: 0.5em 1em;
 }
 
-.navigation li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero section */
 #hero {
     display: grid;
     grid-template-rows: auto;
-    margin: 0;
-    padding: 0;
 }
 
 #hero-img {
@@ -139,7 +125,6 @@ ul.navigation {
     background-color: #e69500;
 }
 
-/* Card container */
 .card-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -159,7 +144,6 @@ ul.navigation {
     margin-top: 0;
 }
 
-/* General content layout */
 main {
     padding: 1em;
 }
@@ -199,7 +183,6 @@ footer .contact-info a {
     text-decoration: none;
 }
 
-/* Layout Grid */
 .layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -237,32 +220,17 @@ footer .contact-info a {
     transition: transform 0.3s ease;
 }
 
+.gallery figure:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
 .gallery figcaption {
     margin-top: 0.5em;
     font-size: 0.9em;
     color: #555;
 }
 
-figure {
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-figcaption {
-    font-size: 16px;
-    margin-top: 8px;
-    color: #333;
-}
-
-figcaption strong {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 4px;
-    color: #000;
-}
-
-/* Form Container */
 .form-container {
     background-color: white;
     border-radius: 5px;
@@ -273,12 +241,6 @@ figcaption strong {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5em;
-}
-
-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
 }
 
 form label {
@@ -292,31 +254,17 @@ form textarea,
 form select {
     width: 100%;
     padding: 0.75em;
-    margin-top: 0.5em;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus {
-    border-color: #072A6C;
-    outline: none;
-    background-color: #fff;
 }
 
 form button {
     padding: 1em;
     font-size: 1em;
-    color: white;
     background-color: #072A6C;
+    color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -324,18 +272,10 @@ form button:hover {
     color: black;
 }
 
-/* Membership Benefits Section */
 aside.membership-benefits {
     padding: 1.5em;
     border-left: 4px solid #072A6C;
     background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-aside.membership-benefits h2 {
-    font-size: 1.5em;
-    color: #072A6C;
-    margin-bottom: 1em;
 }
 
 aside.membership-benefits ul {
@@ -343,26 +283,9 @@ aside.membership-benefits ul {
     padding-left: 1.5em;
 }
 
-aside.membership-benefits li {
-    margin-bottom: 0.5em;
-    color: #333;
-}
-
-/* Default Mobile Styles */
 .view-toggle button {
     margin: 10px;
     padding: 10px 20px;
-    cursor: pointer;
-}
-
-#member-container.grid-view .member {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
-}
-
-#member-container.list-view .member {
-    display: block;
 }
 
 .member {

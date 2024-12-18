@@ -110,4 +110,82 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("Member container or view toggle buttons not found");
     }
+
+    // === Meet & Greet Banner ===
+    const meetGreetBanner = document.getElementById('meet-greet-banner');
+    const closeBannerButton = document.getElementById('close-banner');
+
+    // Show banner only on Monday, Tuesday, and Wednesday
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    if (dayOfWeek >= 1 && dayOfWeek <= 3) { // Show on Monday, Tuesday, and Wednesday
+        meetGreetBanner.style.display = 'block';
+    }
+
+    // Close the banner when the close button is clicked
+    if (closeBannerButton) {
+        closeBannerButton.addEventListener('click', () => {
+            meetGreetBanner.style.display = 'none';
+        });
+    }
+
+    // === Fetch Weather Data ===
+    const weatherDescription = document.getElementById('weather-description');
+    const weatherTemp = document.getElementById('weather-temp');
+    const weatherCard = document.querySelector('.weather-card');
+
+    if (weatherCard) {
+        const apiKey = 'f1d880ba027bef90c5cb579d72f7f15b';
+        const city = 'Lagos';  // Replace with actual city name if needed
+        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+        fetch(weatherUrl)
+            .then(response => response.json())
+            .then(data => {
+                const currentTemp = data.main.temp;
+                const weatherDesc = data.weather[0].description;
+
+                // Update the weather card with the fetched data
+                weatherDescription.textContent = weatherDesc.charAt(0).toUpperCase() + weatherDesc.slice(1);
+                weatherTemp.textContent = `${currentTemp}°C`;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+                weatherDescription.textContent = 'Unable to fetch weather data';
+                weatherTemp.textContent = '';
+            });
+    }
+
+    // === Spotlight Advertisements ===
+    const spotlightAdsContainer = document.getElementById('spotlight-ads');
+
+    if (spotlightAdsContainer) {
+        fetch('data/members.json') // Ensure this path is correct
+            .then(response => response.json())
+            .then(members => {
+                const spotlightMembers = members.filter(member => member.membershipLevel === 'Silver' || member.membershipLevel === 'Gold');
+                const randomSpotlights = getRandomItems(spotlightMembers, 3);
+                displaySpotlights(randomSpotlights);
+            })
+            .catch(error => console.error('Error fetching members data:', error));
+
+        function getRandomItems(arr, num) {
+            const shuffled = [...arr].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, num);
+        }
+
+        function displaySpotlights(members) {
+            members.forEach(member => {
+                const spotlightElement = document.createElement('div');
+                spotlightElement.classList.add('spotlight');
+                spotlightElement.innerHTML = `
+                    <h4>${member.name}</h4>
+                    <p>Membership Level: ${member.membershipLevel}</p>
+                    <p>${member.description}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+                spotlightAdsContainer.appendChild(spotlightElement);
+            });
+        }
+    }
 });

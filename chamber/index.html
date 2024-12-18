@@ -23,6 +23,12 @@
 
 <body>
     <div id="content">
+        <!-- Meet & Greet Banner -->
+        <section id="meet-greet-banner" class="banner">
+            <p>Join us for the Chamber's Meet & Greet on Wednesdays at 7:00 p.m.!</p>
+            <button id="close-banner">❌</button>
+        </section>
+
         <header>
             <a href="index.html" id="logo_link">
                 <img class="logo" src="images/chamber.png" alt="Lagos Chamber of Commerce">
@@ -37,6 +43,7 @@
                 </ul>
             </nav>
         </header>
+        
         <main class="home-grid">
             <div id="hero">
                 <div id="hero-box">
@@ -57,11 +64,13 @@
                 </section>
                 <section class="card weather-card">
                     <h3>Weather Updates</h3>
-                    <p>Get real-time weather updates for Lagos.</p>
+                    <p id="weather-description">Loading...</p>
+                    <p id="weather-temp">Loading...</p>
                 </section>
+                
                 <section class="card spotlight-advertisement">
                     <h3>Spotlight Advertisements</h3>
-                    <p>Discover top companies making a difference in Lagos.</p>
+                    <div id="spotlight-ads">Loading...</div>
                 </section>
             </div>
             <section class="msg">
@@ -73,6 +82,7 @@
                 </p>
             </section>
         </main>
+
         <footer>
             <div class="footer-content">
                 <div class="contact-info">
@@ -89,8 +99,10 @@
                 </div>
             </div>
         </footer>
-        <script src="scripts/chamber.js"></script>
+
     </div>
+
+    <script src="scripts/chamber.js"></script>
 </body>
 
 </html>
